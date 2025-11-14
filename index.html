@@ -10,9 +10,10 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#0B0B45', // Navy Blue
-                        'secondary': '#89CFF0', // Baby Blue (Textakzent)
-                        'accent': '#D4AF37', // Gold (Buttons, Sterne, Akzente)
+                        'primary': '#0B0B45', // Navy Blue (Kontrastfarbe/Seriosität)
+                        'secondary': '#89CFF0', // Baby Blue (Akzentfarbe/Text)
+                        'accent': '#FFD700', // Gold (Buttons, Sterne, Akzente)
+                        'page-bg': '#E9EEF0', // NEU: Off-White Hintergrund
                     }
                 }
             }
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-page-bg">
 
 <nav class="bg-primary text-white shadow-lg">
     <div class="container mx-auto px-4">
@@ -40,7 +41,7 @@
             </div>
 
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="index.html#leistungen" class="text-accent font-bold border-b-2 border-accent pb-1">Leistungen</a>
+                <a href="index.html#leistungen" class="hover:text-accent">Leistungen</a>
                 <a href="angebote.html" class="hover:text-accent">Angebote</a>
                 <a href="ueber-uns.html" class="hover:text-accent">Über uns</a>
                 <a href="ankaufsberatung.html" class="hover:text-accent">Ankauf</a>
@@ -66,7 +67,7 @@
 
 
 <main>
-    <section id="hero" class="relative bg-gray-900 h-96 md:h-screen max-h-screen overflow-hidden">
+    <section id="hero" class="relative bg-primary h-96 md:h-screen max-h-screen overflow-hidden">
         <img src="images/hero_immobilie.jpg"
              alt="Hochwertige Immobilie oder Stadtszene"
              class="w-full h-full object-cover opacity-60">
@@ -76,8 +77,7 @@
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
                     Ihr Partner für Immobilienvertrieb, Beratung & Verwaltung.
                 </h1>
-                <p class="text-xl md:text-2xl font-light mb-8 text-secondary">
-                    Kompetent. Transparent. Persönlich.
+                <p class="text-xl md:text-2xl font-light mb-8 text-secondary"> Kompetent. Transparent. Persönlich.
                 </p>
                 <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
                     <a href="angebote.html" class="bg-accent text-primary hover:bg-white text-lg font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300">
@@ -95,9 +95,9 @@
         <div class="bg-white rounded-lg shadow-2xl p-8 md:p-12 text-center mt-4 sm:mt-8 md:-mt-32 relative z-10">
             <h2 class="text-3xl font-bold mb-4 text-primary">Unsere Philosophie</h2>
             <p class="text-lg mb-4 text-gray-700 max-w-3xl mx-auto">
-                Fischer-Geserich Immobilien steht für **nachhaltige Immobilienlösungen** im Raum **Berlin/Brandenburg**.
+                Fischer-Geserich Immobilien steht für nachhaltige Immobilienlösungen im Raum Berlin/Brandenburg.
                 Finanzierungen vermitteln wir deutschlandweit. Wir begleiten Sie von der Objektbewertung
-                bis zur Finanzierung mit höchster **Kompetenz** und **Transparenz**.
+                bis zur Finanzierung mit höchster Kompetenz und Transparenz.
             </p>
             <p class="text-sm italic text-gray-500">
                 Unser Ziel ist Ihr Erfolg – langfristig und partnerschaftlich.
@@ -105,7 +105,7 @@
         </div>
     </section>
 
-    <section id="leistungen" class="container mx-auto px-4 py-12 bg-gray-50">
+    <section id="leistungen" class="container mx-auto px-4 py-12 bg-page-bg">
         <h2 class="text-3xl font-bold text-center mb-10 text-primary">Unsere Kernleistungen</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -134,29 +134,32 @@
     <section id="angebote" class="container mx-auto px-4 py-16">
         <h2 class="text-3xl font-bold text-center mb-10 text-primary">Aktuelle Immobilien-Highlights</h2>
         <p class="text-center text-gray-600 mb-8">
-            Eine Auswahl unserer aktuell verfügbaren Objekte. Alle Angebote finden Sie auf unserer <a href="angebote.html" class="text-primary font-semibold hover:underline">Angebotsseite</a>.
+            Eine Auswahl unserer aktuell verfügbaren Objekte. Alle Angebote finden Sie auf unserer <a href="angebote.html" class="text-secondary font-semibold hover:underline">Angebotsseite</a>.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="images/angebot1_platzhalter.jpg" alt="Exklusive Eigentumswohnung" class="w-full h-48 object-cover">
+                <img src="images/hero_immobilie.jpg" alt="Exklusive Eigentumswohnung" class="w-full h-48 object-cover">
                 <div class="p-4">
+                    <span class="inline-block bg-secondary text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">NEU</span>
                     <h4 class="text-xl font-bold text-primary mb-1">Eigentumswohnung in Berlin-Mitte</h4>
                     <p class="text-gray-700 mb-3">2 Zimmer, 78 m², Balkon, Neubau</p>
                     <a href="#" class="bg-accent text-primary font-semibold py-2 px-4 rounded hover:bg-primary hover:text-white transition duration-300">Details ansehen</a>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="images/angebot2_platzhalter.jpg" alt="Modernes Einfamilienhaus" class="w-full h-48 object-cover">
+                <img src="images/hero_immobilie.jpg" alt="Modernes Einfamilienhaus" class="w-full h-48 object-cover">
                 <div class="p-4">
+                    <span class="inline-block bg-secondary text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">RENDITE</span>
                     <h4 class="text-xl font-bold text-primary mb-1">Modernes Einfamilienhaus in Potsdam</h4>
                     <p class="text-gray-700 mb-3">5 Zimmer, 180 m², Garten, Garage</p>
                     <a href="#" class="bg-accent text-primary font-semibold py-2 px-4 rounded hover:bg-primary hover:text-white transition duration-300">Details ansehen</a>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="images/angebot3_platzhalter.jpg" alt="Renditeobjekt Mehrfamilienhaus" class="w-full h-48 object-cover">
+                <img src="images/hero_immobilie.jpg" alt="Renditeobjekt Mehrfamilienhaus" class="w-full h-48 object-cover">
                 <div class="p-4">
+                    <span class="inline-block bg-secondary text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">PROJEKT</span>
                     <h4 class="text-xl font-bold text-primary mb-1">Renditeobjekt in Berlin-Neukölln</h4>
                     <p class="text-gray-700 mb-3">Mehrfamilienhaus, 6 Einheiten, vollvermietet</p>
                     <a href="#" class="bg-accent text-primary font-semibold py-2 px-4 rounded hover:bg-primary hover:text-white transition duration-300">Details ansehen</a>
@@ -209,11 +212,11 @@
             <p class="mb-6 text-gray-700">
                 Sie möchten eine Immobilie verkaufen, kaufen, verwalten lassen oder benötigen eine Finanzierungsberatung? Kontaktieren Sie uns für ein unverbindliches Erstgespräch.
             </p>
-            <p class="mb-2"><i class="fas fa-phone-alt text-accent mr-2"></i> **Telefon:** <a href="tel:+49301234567" class="text-primary hover:underline">030 / 1234567</a></p>
-            <p><i class="fas fa-envelope text-accent mr-2"></i> **E-Mail:** <a href="mailto:kontakt@fg-immobilien.de" class="text-primary hover:underline">kontakt@fg-immobilien.de</a></p>
+            <p class="mb-2"><i class="fas fa-phone-alt text-accent mr-2"></i> Telefon: <a href="tel:+49301234567" class="text-primary hover:underline">030 / 1234567</a></p>
+            <p><i class="fas fa-envelope text-accent mr-2"></i> E-Mail: <a href="mailto:kontakt@fg-immobilien.de" class="text-primary hover:underline">kontakt@fg-immobilien.de</a></p>
         </div>
 
-            <div class="bg-gray-50 p-6 rounded-lg">
+            <div class="bg-page-bg p-6 rounded-lg">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Rückruf anfordern</h3>
                 <form action="#" method="POST" class="space-y-4">
                     <div>
@@ -274,7 +277,6 @@
 
 
 <script src="script.js"></script>
-
 
 
 </body>
