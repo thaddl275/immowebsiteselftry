@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straßenbahnhof Leipzig</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+<!-- Navigation -->
+<nav class="bg-yellow-600 text-white shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold">
+                <a href="index.html" class="flex items-center">
+                    <i class="fas fa-train-tram mr-2"></i>
+                    Straßenbahnhof Leipzig
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="hover:text-yellow-200">Home</a>
+
+                <div class="relative group">
+                    <a href="geschichte.html" class="hover:text-yellow-200 flex items-center">
+                        Geschichte <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </a>
+                    <!-- Dropdown ohne Abstand -->
+                    <div class="absolute left-0 top-full mt-0 bg-white text-gray-800 rounded shadow-lg py-2 w-48 z-50 hidden group-hover:block">
+                        <a href="geschichte.html#geschichte-vergangenheit" class="block px-4 py-2 hover:bg-yellow-100">Vergangenheit</a>
+                        <a href="geschichte.html#geschichte-gegenwart" class="block px-4 py-2 hover:bg-yellow-100">Gegenwart</a>
+                        <a href="geschichte.html#geschichte-zukunft" class="block px-4 py-2 hover:bg-yellow-100">Zukunft</a>
+                    </div>
+                </div>
+
+                <a href="anschauen.html" class="hover:text-yellow-200">Zum Anschauen</a>
+                <a href="quiz.html" class="hover:text-yellow-200">Quiz</a>
+                <a href="impressum.html" class="hover:text-yellow-200">Impressum</a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Home</a>
+
+                    <div class="relative">
+                        <div class="flex flex-col bg-yellow-700 rounded">
+                            <a href="geschichte.html" class="block px-3 py-2 text-white">Geschichte</a>
+                            <div class="pl-4 mt-1 space-y-1">
+                                <a href="geschichte.html#geschichte-vergangenheit" class="block px-3 py-2 hover:bg-yellow-600 rounded">Vergangenheit</a>
+                                <a href="geschichte.html#geschichte-gegenwart" class="block px-3 py-2 hover:bg-yellow-600 rounded">Gegenwart</a>
+                                <a href="geschichte.html#geschichte-zukunft" class="block px-3 py-2 hover:bg-yellow-600 rounded">Zukunft</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="anschauen.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Zum Anschauen</a>
+                    <a href="quiz.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Quiz</a>
+                    <a href="impressum.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    
+
+    <!-- Impressum -->
+    <section id="impressum" class="py-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Impressum</h2>
+
+            <div class="max-w-3xl mx-auto bg-gray-700 rounded-lg shadow-lg p-6 space-y-6">
+                <div class="imprint-wrapper space-y-4">
+                    <h3 class="text-xl font-semibold border-b border-gray-500 pb-2">Angaben gemäß § 5 TMG</h3>
+                    <p>Hochschule für Technik, Wirtschaft und Kultur Leipzig</p>
+                    <p>HTWK Leipzig <br>
+                        Karl-Liebknecht-Str. 132<br>
+                        04277 Leipzig </p>
+
+                    <h3 class="text-lg font-semibold mt-4">Vertreten durch</h3>
+                    <p>Rektor Prof. Dr.-Ing. Jean-Alexander Müller</p>
+
+                    <h3 class="text-lg font-semibold mt-4">Kontakt</h3>
+                    <p>
+                        Telefon: +49 (0) 341/3076 0 <br>
+                        Telefax: +49 (0) 341/3076 6456 <br>
+                        E-Mail: info (at) htwk-leipzig.de
+                    </p>
+
+                    <h3 class="text-lg font-semibold mt-4">Postanschrift</h3>
+                    <p>
+                        HTWK Leipzig<br>
+                        Postfach 301166 <br>
+                        04251 Leipzig
+                    </p>
+
+                    <h3 class="text-lg font-semibold mt-4">Aufsichtsbehörde</h3>
+                    <p>
+                        Sächsisches Staatsministerium für Wissenschaft und Kunst<br>
+                        Wigardstraße 17, 01097 Dresden<br>
+                        <a href="https://www.smwk.de" class="text-yellow-400 hover:underline">www.smwk.de</a>
+                    </p>
+
+                    <h3 class="text-lg font-semibold mt-4">Rechtsform</h3>
+                    <p>Körperschaft des öffentlichen Rechts (§ 2 Abs. 1 SächsHSFG)</p>
+
+                    <h3 class="text-lg font-semibold mt-4">USt-IdNr.</h3>
+                    <p>DE 153564026</p>
+
+                    <h3 class="text-lg font-semibold mt-4">Ansprechpartner Webseite(n)</h3>
+                    <p>
+                        Prof. Dr.-Ing. Ulrich Schmedes<br>
+                        ulrich.schmedes (at) htwk-leipzig.de
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-train-tram mr-2"></i>
+                    Straßenbahnhof Leipzig
+                </h3>
+                <p class="text-gray-400 mt-1">Geschichte und Zukunft des Leipziger Straßenbahnnetzes</p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>
+                &copy; 2023 Straßenbahnmuseum Leipzig e.V. Alle Rechte vorbehalten.
+                | <a href="datenschutz.html" class="hover:underline">Datenschutzerklärung</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption" class="text-white text-center mt-2 text-lg"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

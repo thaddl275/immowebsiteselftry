@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straßenbahnhof Leipzig</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+<!-- Navigation -->
+<nav class="bg-yellow-600 text-white shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold">
+                <a href="index.html" class="flex items-center">
+                    <i class="fas fa-train-tram mr-2"></i>
+                    Straßenbahnhof Leipzig
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <div class="relative group">
+                    <a href="geschichte.html" class="hover:text-yellow-200 flex items-center">
+                        Geschichte <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </a>
+                    <!-- Dropdown ohne Abstand -->
+                    <div class="absolute left-0 top-full mt-0 bg-white text-gray-800 rounded shadow-lg py-2 w-48 z-50 hidden group-hover:block">
+                        <a href="geschichte.html#geschichte-vergangenheit" class="block px-4 py-2 hover:bg-yellow-100">Vergangenheit</a>
+                        <a href="geschichte.html#geschichte-gegenwart" class="block px-4 py-2 hover:bg-yellow-100">Gegenwart</a>
+                        <a href="geschichte.html#geschichte-zukunft" class="block px-4 py-2 hover:bg-yellow-100">Zukunft</a>
+                    </div>
+                </div>
+
+                <a href="anschauen.html" class="hover:text-yellow-200">Zum Anschauen</a>
+                <a href="quiz.html" class="hover:text-yellow-200">Quiz</a>
+                <a href="impressum.html" class="hover:text-yellow-200">Impressum</a>
+            </div>
+
+
+            <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="flex flex-col space-y-2">
+                <div class="relative">
+                    <div class="flex flex-col bg-yellow-700 rounded">
+                        <a href="geschichte.html" class="block px-3 py-2 text-white">Geschichte</a>
+                        <div class="pl-4 mt-1 space-y-1">
+                            <a href="geschichte.html#geschichte-vergangenheit" class="block px-3 py-2 hover:bg-yellow-600 rounded">Vergangenheit</a>
+                            <a href="geschichte.html#geschichte-gegenwart" class="block px-3 py-2 hover:bg-yellow-600 rounded">Gegenwart</a>
+                            <a href="geschichte.html#geschichte-zukunft" class="block px-3 py-2 hover:bg-yellow-600 rounded">Zukunft</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="anschauen.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Zum Anschauen</a>
+                <a href="quiz.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Quiz</a>
+                <a href="impressum.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Impressum</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="relative">
+        <div class="slideshow-container relative h-96 md:h-screen max-h-screen overflow-hidden">
+            <div class="slide active">
+                <img src="images/slide1.jpg"
+                     alt="Moderne Straßenbahn in Leipzig"
+                     class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8 text-white">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2">Willkommen zur Geschichte des Straßenbahnhofs Leipzig</h1>
+                    <p class="text-lg md:text-xl">Entdecken Sie über 140 Jahre Verkehrsgeschichte</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/slide2.jpg"
+                     alt="Historische Straßenbahn in Leipzig"
+                     class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8 text-white">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2">Von Pferdebahn zu Elektroantrieb</h1>
+                    <p class="text-lg md:text-xl">Die Entwicklung des Leipziger Straßenbahnnetzes</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/slide3.jpg"
+                     alt="Straßenbahnhof Leipzig Hauptbahnhof"
+                     class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8 text-white">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2">Das moderne Verkehrskonzept</h1>
+                    <p class="text-lg md:text-xl">Wie die Straßenbahn Leipzig heute prägt</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                <span class="dot w-3 h-3 rounded-full bg-white cursor-pointer" onclick="currentSlide(1)"></span>
+                <span class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer" onclick="currentSlide(2)"></span>
+                <span class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <!-- Intro Section -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">Willkommen in der Welt der Leipziger Straßenbahn</h2>
+                <p class="mb-4">
+                    Seit über 150 Jahren prägt die Straßenbahn das Stadtbild Leipzigs. Von den ersten
+                    Pferdebahnwagen über elektrische Innovationen bis hin zum modernen, barrierefreien
+                    Nahverkehr – das Netz wächst, verändert sich und verbindet täglich tausende Menschen
+                    mit ihrer Stadt.
+                </p>
+                <p class="mb-6">
+                    Tauche ein in die bewegte Geschichte, entdecke spannende Bilder und Videos und wirf
+                    einen Blick in das Leipziger Straßenbahnnetz.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-lg font-semibold">
+                    <div>
+                        <span class="block text-yellow-600 text-2xl">214,7 km</span>
+                        Gesamtlänge des Netzes
+                    </div>
+                    <div>
+                        <span class="block text-yellow-600 text-2xl">13</span>
+                        Straßenbahnlinien
+                    </div>
+                    <div>
+                        <span class="block text-yellow-600 text-2xl">271</span>
+                        Bahnen täglich im Einsatz
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Die Leipziger Straßenbahn im Video</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/B2kBc4pbEVQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Straßenbahn-Geschichte Leipzig</h3>
+                        <p>Ein Rückblick auf die Entwicklung der Leipziger Straßenbahn von den Anfängen bis heute.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Das moderne Straßenbahnnetz</h3>
+                        <p>Wie die Straßenbahn das Verkehrskonzept der Stadt Leipzig prägt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-train-tram mr-2"></i>
+                    Straßenbahnhof Leipzig
+                </h3>
+                <p class="text-gray-400 mt-1">Geschichte und Zukunft des Leipziger Straßenbahnnetzes</p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>
+                &copy; 2023 Straßenbahnmuseum Leipzig e.V. Alle Rechte vorbehalten.
+                | <a href="datenschutz.html" class="hover:underline">Datenschutzerklärung</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption" class="text-white text-center mt-2 text-lg"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
