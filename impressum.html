@@ -3,182 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Straßenbahnhof Leipzig</title>
+    <title>Immobilienverwaltung & Projektentwicklung – Fischer-Geserich Immobilien</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0B0B45', // Navy Blue
+                        'secondary': '#89CFF0', // Baby Blue (Textakzent)
+                        'accent': '#D4AF37', // Gold (Buttons, Sterne, Akzente)
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50">
 
-<!-- Navigation -->
-<nav class="bg-yellow-600 text-white shadow-lg">
+<nav class="bg-primary text-white shadow-lg">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
             <div class="text-2xl font-bold">
                 <a href="index.html" class="flex items-center">
-                    <i class="fas fa-train-tram mr-2"></i>
-                    Straßenbahnhof Leipzig
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
                 </a>
             </div>
 
-            <!-- Mobile menu button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-white focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="index.html" class="hover:text-yellow-200">Home</a>
-
-                <div class="relative group">
-                    <a href="geschichte.html" class="hover:text-yellow-200 flex items-center">
-                        Geschichte <i class="fas fa-chevron-down ml-1 text-sm"></i>
-                    </a>
-                    <!-- Dropdown ohne Abstand -->
-                    <div class="absolute left-0 top-full mt-0 bg-white text-gray-800 rounded shadow-lg py-2 w-48 z-50 hidden group-hover:block">
-                        <a href="geschichte.html#geschichte-vergangenheit" class="block px-4 py-2 hover:bg-yellow-100">Vergangenheit</a>
-                        <a href="geschichte.html#geschichte-gegenwart" class="block px-4 py-2 hover:bg-yellow-100">Gegenwart</a>
-                        <a href="geschichte.html#geschichte-zukunft" class="block px-4 py-2 hover:bg-yellow-100">Zukunft</a>
-                    </div>
-                </div>
-
-                <a href="anschauen.html" class="hover:text-yellow-200">Zum Anschauen</a>
-                <a href="quiz.html" class="hover:text-yellow-200">Quiz</a>
-                <a href="impressum.html" class="hover:text-yellow-200">Impressum</a>
+                <a href="index.html#leistungen" class="hover:text-accent">Leistungen</a>
+                <a href="angebote.html" class="hover:text-accent">Angebote</a>
+                <a href="ueber-uns.html" class="hover:text-accent">Über uns</a>
+                <a href="ankaufsberatung.html" class="hover:text-accent">Ankauf</a>
+                <a href="finanzierungsberatung.html" class="hover:text-accent">Finanzierung</a>
+                <a href="verwaltung.html" class="hover:text-accent">Verwaltung</a>
+                <a href="index.html#kontakt" class="hover:text-primary bg-accent text-primary px-4 py-2 rounded font-semibold transition duration-300 hover:bg-white">Kontakt</a>
             </div>
+        </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <div class="flex flex-col space-y-2">
-                    <a href="index.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Home</a>
-
-                    <div class="relative">
-                        <div class="flex flex-col bg-yellow-700 rounded">
-                            <a href="geschichte.html" class="block px-3 py-2 text-white">Geschichte</a>
-                            <div class="pl-4 mt-1 space-y-1">
-                                <a href="geschichte.html#geschichte-vergangenheit" class="block px-3 py-2 hover:bg-yellow-600 rounded">Vergangenheit</a>
-                                <a href="geschichte.html#geschichte-gegenwart" class="block px-3 py-2 hover:bg-yellow-600 rounded">Gegenwart</a>
-                                <a href="geschichte.html#geschichte-zukunft" class="block px-3 py-2 hover:bg-yellow-600 rounded">Zukunft</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="anschauen.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Zum Anschauen</a>
-                    <a href="quiz.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Quiz</a>
-                    <a href="impressum.html" class="block px-3 py-2 hover:bg-yellow-700 rounded">Impressum</a>
-                </div>
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html#leistungen" class="block px-3 py-2 hover:bg-primary/90 rounded">Leistungen</a>
+                <a href="angebote.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Angebote</a>
+                <a href="ueber-uns.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Über uns</a>
+                <a href="ankaufsberatung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Ankauf</a>
+                <a href="finanzierungsberatung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Finanzierung</a>
+                <a href="verwaltung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Verwaltung</a>
+                <a href="index.html#kontakt" class="block px-3 py-2 hover:bg-primary/90 rounded">Kontakt</a>
             </div>
         </div>
     </div>
 </nav>
 
-<!-- Main Content -->
 <main>
-    
 
-    <!-- Impressum -->
-    <section id="impressum" class="py-12 bg-gray-800 text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Impressum</h2>
-
-            <div class="max-w-3xl mx-auto bg-gray-700 rounded-lg shadow-lg p-6 space-y-6">
-                <div class="imprint-wrapper space-y-4">
-                    <h3 class="text-xl font-semibold border-b border-gray-500 pb-2">Angaben gemäß § 5 TMG</h3>
-                    <p>Hochschule für Technik, Wirtschaft und Kultur Leipzig</p>
-                    <p>HTWK Leipzig <br>
-                        Karl-Liebknecht-Str. 132<br>
-                        04277 Leipzig </p>
-
-                    <h3 class="text-lg font-semibold mt-4">Vertreten durch</h3>
-                    <p>Rektor Prof. Dr.-Ing. Jean-Alexander Müller</p>
-
-                    <h3 class="text-lg font-semibold mt-4">Kontakt</h3>
-                    <p>
-                        Telefon: +49 (0) 341/3076 0 <br>
-                        Telefax: +49 (0) 341/3076 6456 <br>
-                        E-Mail: info (at) htwk-leipzig.de
-                    </p>
-
-                    <h3 class="text-lg font-semibold mt-4">Postanschrift</h3>
-                    <p>
-                        HTWK Leipzig<br>
-                        Postfach 301166 <br>
-                        04251 Leipzig
-                    </p>
-
-                    <h3 class="text-lg font-semibold mt-4">Aufsichtsbehörde</h3>
-                    <p>
-                        Sächsisches Staatsministerium für Wissenschaft und Kunst<br>
-                        Wigardstraße 17, 01097 Dresden<br>
-                        <a href="https://www.smwk.de" class="text-yellow-400 hover:underline">www.smwk.de</a>
-                    </p>
-
-                    <h3 class="text-lg font-semibold mt-4">Rechtsform</h3>
-                    <p>Körperschaft des öffentlichen Rechts (§ 2 Abs. 1 SächsHSFG)</p>
-
-                    <h3 class="text-lg font-semibold mt-4">USt-IdNr.</h3>
-                    <p>DE 153564026</p>
-
-                    <h3 class="text-lg font-semibold mt-4">Ansprechpartner Webseite(n)</h3>
-                    <p>
-                        Prof. Dr.-Ing. Ulrich Schmedes<br>
-                        ulrich.schmedes (at) htwk-leipzig.de
-                    </p>
-                </div>
-            </div>
+    <section class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">
+                Impressum & Rechtliche Hinweise
+            </h1>
+            <p class="text-lg md:text-xl font-light text-secondary max-w-4xl mx-auto">
+                Pflichtangaben gemäß § 5 TMG und Informationen zur Gewerbezulassung.
+            </p>
         </div>
     </section>
 
+    <section id="impressum-inhalt" class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-2xl space-y-8">
 
+            <div>
+                <h2 class="text-3xl font-bold text-primary mb-4 border-b-2 border-accent pb-2">
+                    Pflichtangaben nach § 5 TMG
+                </h2>
+                <div class="space-y-3 text-gray-700">
+                    <p>
+                        **Fischer-Geserich Immobilien GmbH**
+                    </p>
+                    <p>
+                        **Rechtsform:** Gesellschaft mit beschränkter Haftung (GmbH)<br>
+                        **Sitz:** Musterstraße 123, 10115 Berlin
+                    </p>
+                    <p>
+                        **Vertretungsberechtigte Geschäftsführer:** Max Fischer, Andrea Geserich
+                    </p>
+                    <p>
+                        **Kontakt:**<br>
+                        Telefon: <a href="tel:+49301234567" class="text-primary hover:underline">030 / 1234567</a><br>
+                        E-Mail: <a href="mailto:kontakt@fg-immobilien.de" class="text-primary hover:underline">kontakt@fg-immobilien.de</a>
+                    </p>
+                    <p>
+                        **Handelsregister:** Amtsgericht Berlin (Charlottenburg), HRB 12345 B<br>
+                        **Umsatzsteuer-Identifikationsnummer:** DE123456789
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-primary mb-4 border-b-2 border-accent pb-2">
+                    Aufsichtsbehörden & Zulassungen
+                </h2>
+                <div class="space-y-3 text-gray-700">
+                    <p>
+                        **Zuständige Aufsichtsbehörde für die Tätigkeit nach § 34c GewO (Immobilienmakler):**<br>
+                        Bezirksamt Berlin Mitte (Aufsichtsbehörde für Gewerbe), Musteradresse, 10115 Berlin
+                    </p>
+                    <p>
+                        **Erlaubnis nach § 34c GewO:** Erteilt durch [Aufsichtsbehörde eintragen]
+                    </p>
+                    <p>
+                        **Erlaubnis nach § 34i Abs. 1 S. 1 GewO (Immobiliardarlehensvermittler):**<br>
+                        Registrierungsnummer: D-AB-1234-5678-90 (IHK Berlin)
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary mb-3">
+                        Datenschutzrichtlinien
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Informationen zur Erhebung, Verarbeitung und Nutzung Ihrer Daten finden Sie in unserer vollständigen Datenschutzerklärung.
+                    </p>
+                    <a href="datenschutz.html" class="bg-secondary text-primary font-bold py-2 px-4 rounded hover:bg-accent transition duration-300">
+                        Zur Datenschutzerklärung
+                    </a>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary mb-3">
+                        Allgemeine Geschäftsbedingungen (AGB)
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Unsere AGB regeln die Vertragsbeziehung für unsere Dienstleistungen (Vermittlung, Verwaltung, Beratung).
+                    </p>
+                    <a href="agb.pdf" target="_blank" class="bg-secondary text-primary font-bold py-2 px-4 rounded hover:bg-accent transition duration-300">
+                        AGB als PDF herunterladen
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-4 space-y-4 text-gray-700">
+                <h2 class="text-2xl font-bold text-primary border-b-2 border-accent pb-2">
+                    Haftung & Streitschlichtung
+                </h2>
+                <p>
+                    **Haftung für Inhalte:** Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+                </p>
+                <p>
+                    **Disclaimer für externe Links:** Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+                </p>
+                <p>
+                    **Streitschlichtung:** Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter folgendem Link finden: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 
 
-<!-- Footer -->
 <footer class="bg-gray-900 text-white py-8">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
                 <h3 class="text-xl font-bold flex items-center">
-                    <i class="fas fa-train-tram mr-2"></i>
-                    Straßenbahnhof Leipzig
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
                 </h3>
-                <p class="text-gray-400 mt-1">Geschichte und Zukunft des Leipziger Straßenbahnnetzes</p>
+                <p class="text-gray-400 mt-1">Ihr Partner für Immobilienlösungen in Berlin/Brandenburg</p>
             </div>
 
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white">
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
                     <i class="fab fa-facebook-f text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white">
-                    <i class="fab fa-twitter text-xl"></i>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white">
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
                     <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white">
-                    <i class="fab fa-youtube text-xl"></i>
                 </a>
             </div>
         </div>
 
         <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
             <p>
-                &copy; 2023 Straßenbahnmuseum Leipzig e.V. Alle Rechte vorbehalten.
-                | <a href="datenschutz.html" class="hover:underline">Datenschutzerklärung</a>
+                &copy; 2024 Fischer-Geserich Immobilien. Alle Rechte vorbehalten.
+                | <a href="impressum.html" class="hover:underline">Impressum</a>
+                | <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
             </p>
         </div>
     </div>
 </footer>
 
-
-<!-- Image Modal -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-    <div id="caption" class="text-white text-center mt-2 text-lg"></div>
-</div>
 
 <script src="script.js"></script>
 

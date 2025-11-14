@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fischer-Geserich Immobilien – Vertrieb, Beratung & Verwaltung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0B0B45', // Navy Blue
+                        'secondary': '#89CFF0', // Baby Blue (Textakzent)
+                        'accent': '#D4AF37', // Gold (Buttons, Sterne, Akzente)
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+<nav class="bg-primary text-white shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold">
+                <a href="index.html" class="flex items-center">
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html#leistungen" class="hover:text-accent">Leistungen</a>
+                <a href="angebote.html" class="hover:text-accent">Angebote</a>
+                <a href="ueber-uns.html" class="text-accent font-bold border-b-2 border-accent pb-1">Über uns</a>
+                <a href="ankaufsberatung.html" class="hover:text-accent">Ankauf</a>
+                <a href="finanzierungsberatung.html" class="hover:text-accent">Finanzierung</a>
+                <a href="verwaltung.html" class="hover:text-accent">Verwaltung</a>
+                <a href="index.html#kontakt" class="hover:text-primary bg-accent text-primary px-4 py-2 rounded font-semibold transition duration-300 hover:bg-white">Kontakt</a>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html#leistungen" class="block px-3 py-2 hover:bg-primary/90 rounded">Leistungen</a>
+                <a href="angebote.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Angebote</a>
+                <a href="ueber-uns.html" class="block px-3 py-2 bg-accent text-primary rounded font-semibold">Über uns</a>
+                <a href="ankaufsberatung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Ankauf</a>
+                <a href="finanzierungsberatung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Finanzierung</a>
+                <a href="verwaltung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Verwaltung</a>
+                <a href="index.html#kontakt" class="block px-3 py-2 hover:bg-primary/90 rounded">Kontakt</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+    <section class="bg-primary text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">
+                Ihr Fundament des Erfolgs.
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-secondary max-w-3xl mx-auto">
+                Lernen Sie das Team hinter Fischer-Geserich Immobilien kennen.
+            </p>
+        </div>
+    </section>
+
+    <section id="mission" class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white p-8 rounded-lg shadow-xl">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-primary border-b-4 border-accent pb-2 inline-block">
+                    Unsere Mission & Geschichte
+                </h2>
+                <p class="text-lg mb-4 text-gray-700">
+                    Fischer-Geserich Immobilien wurde aus der Überzeugung heraus gegründet, dass der Immobilienmarkt **mehr als nur Transaktionen** braucht. Wir bieten seit **über 10 Jahren** umfassende Lösungen, die Vertrauen, Transparenz und persönliche Betreuung in den Vordergrund stellen.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Wir begleiten Eigentümer und Käufer bei allen Schritten des Immobilienprozesses – **mit Leidenschaft und Expertise**. Unser Hauptstandort ist **Berlin/Brandenburg**, aber unsere Finanzierungsdienstleistungen bieten wir deutschlandweit an.
+                </p>
+            </div>
+            <div class="hidden lg:block">
+                <img src="images/buero_platzhalter.jpg" alt="Büro oder Team bei der Arbeit" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="werte" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">
+                Werte, die uns leiten
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-md border-t-4 border-accent">
+                    <i class="fas fa-eye text-5xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Transparenz</h3>
+                    <p class="text-gray-600 text-sm">Offene Kommunikation und verständliche Prozesse in jedem Schritt.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md border-t-4 border-accent">
+                    <i class="fas fa-tachometer-alt text-5xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Effizienz</h3>
+                    <p class="text-gray-600 text-sm">Zielgerichtetes Handeln für schnelle und optimale Ergebnisse.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md border-t-4 border-accent">
+                    <i class="fas fa-map-marker-alt text-5xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Regionalität</h3>
+                    <p class="text-gray-600 text-sm">Tiefe Marktkenntnis im Raum Berlin und Brandenburg.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md border-t-4 border-accent">
+                    <i class="fas fa-user-check text-5xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Persönliche Betreuung</h3>
+                    <p class="text-gray-600 text-sm">Ein fester Ansprechpartner von der ersten Idee bis zum Abschluss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary">
+            Unser Führungsteam
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden text-center">
+                <img src="images/team_max_fischer.jpg" alt="Foto von Max Fischer" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-primary mb-1">Max Fischer</h3>
+                    <p class="text-accent font-semibold mb-3">Geschäftsführer</p>
+                    <p class="text-gray-600 text-sm mb-4">Spezialist für Investmentimmobilien und Projektentwicklung. Seine Expertise bildet das strategische Fundament unserer Arbeit.</p>
+                    <a href="#" class="text-primary hover:text-accent transition duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden text-center">
+                <img src="images/team_andrea_geserich.jpg" alt="Foto von Andrea Geserich" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-primary mb-1">Andrea Geserich</h3>
+                    <p class="text-accent font-semibold mb-3">Leitung Vertrieb & Finanzen</p>
+                    <p class="text-gray-600 text-sm mb-4">Verantwortlich für die reibungslose Finanzierungsvermittlung und den effizienten Immobilienvertrieb. Ihre Zahlenexpertise ist unschlagbar.</p>
+                    <a href="#" class="text-primary hover:text-accent transition duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden text-center">
+                <img src="images/team_senior_partner.jpg" alt="Foto des Senior Partners" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-primary mb-1">Senior Partner</h3>
+                    <p class="text-accent font-semibold mb-3">Strategische Beratung</p>
+                    <p class="text-gray-600 text-sm mb-4">Bringt jahrzehntelange Erfahrung im klassischen Maklergeschäft ein und sichert die hohe Qualität unserer Beratung.</p>
+                    <a href="#" class="text-primary hover:text-accent transition duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="partner" class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-accent">
+                Unsere Partner & Qualifikationen
+            </h2>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-secondary">
+                    Starke Kooperationen für Ihren Vorteil
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
+
+                    <a href="#" target="_blank" class="block p-4 bg-white rounded-lg shadow-lg text-primary hover:shadow-accent transition duration-300 transform hover:scale-[1.02]">
+                        <i class="fas fa-handshake text-3xl text-accent mb-2"></i>
+                        <p class="font-bold">Immovisory</p>
+                        <p class="text-sm">Für unabhängige Ankaufs- und Finanzierungsberatung</p>
+                    </a>
+
+                    <a href="#" target="_blank" class="block p-4 bg-white rounded-lg shadow-lg text-primary hover:shadow-accent transition duration-300 transform hover:scale-[1.02]">
+                        <i class="fas fa-shield-alt text-3xl text-accent mb-2"></i>
+                        <p class="font-bold">Allianz Agentur von Pete</p>
+                        <p class="text-sm">Exklusive Versicherungs- und Absicherungslösungen</p>
+                    </a>
+
+                    <a href="#" target="_blank" class="block p-4 bg-white rounded-lg shadow-lg text-primary hover:shadow-accent transition duration-300 transform hover:scale-[1.02]">
+                        <i class="fas fa-user-tie text-3xl text-accent mb-2"></i>
+                        <p class="font-bold">Maklerunternehmen Senior Geserich</p>
+                        <p class="text-sm">Partnerschaft für traditionelle Immobilienexpertise</p>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-center text-secondary">
+                    Geprüfte Expertise und Zulassungen
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-center">
+
+                    <div class="flex flex-col justify-center items-center bg-accent text-primary p-4 rounded-lg font-bold shadow-lg h-24">
+                        <span class="text-lg">§ 34i</span>
+                        <span class="text-sm">Finanzierungsvermittler</span>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center bg-accent text-primary p-4 rounded-lg font-bold shadow-lg h-24">
+                        <span class="text-lg">§ 34c</span>
+                        <span class="text-sm">Immomakler</span>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center bg-white text-primary p-4 rounded-lg font-bold shadow-lg h-24">
+                        <span class="text-lg">IVD</span>
+                        <span class="text-sm">Mitglied</span>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center bg-white text-primary p-4 rounded-lg font-bold shadow-lg h-24">
+                        <span class="text-lg">DEKRA</span>
+                        <span class="text-sm">Zertifiziert</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
+                </h3>
+                <p class="text-gray-400 mt-1">Ihr Partner für Immobilienlösungen in Berlin/Brandenburg</p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>
+                &copy; 2024 Fischer-Geserich Immobilien. Alle Rechte vorbehalten.
+                | <a href="impressum.html" class="hover:underline">Impressum</a>
+                | <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>

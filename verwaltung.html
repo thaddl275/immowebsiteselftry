@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immobilienverwaltung & Projektentwicklung – Fischer-Geserich Immobilien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0B0B45', // Navy Blue
+                        'secondary': '#89CFF0', // Baby Blue (Textakzent)
+                        'accent': '#D4AF37', // Gold (Buttons, Sterne, Akzente)
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+<nav class="bg-primary text-white shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold">
+                <a href="index.html" class="flex items-center">
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html#leistungen" class="hover:text-accent">Leistungen</a>
+                <a href="angebote.html" class="hover:text-accent">Angebote</a>
+                <a href="ueber-uns.html" class="hover:text-accent">Über uns</a>
+                <a href="ankaufsberatung.html" class="hover:text-accent">Ankauf</a>
+                <a href="finanzierungsberatung.html" class="hover:text-accent">Finanzierung</a>
+                <a href="verwaltung.html" class="text-accent font-bold border-b-2 border-accent pb-1">Verwaltung</a>
+                <a href="index.html#kontakt" class="hover:text-primary bg-accent text-primary px-4 py-2 rounded font-semibold transition duration-300 hover:bg-white">Kontakt</a>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html#leistungen" class="block px-3 py-2 hover:bg-primary/90 rounded">Leistungen</a>
+                <a href="angebote.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Angebote</a>
+                <a href="ueber-uns.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Über uns</a>
+                <a href="ankaufsberatung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Ankauf</a>
+                <a href="finanzierungsberatung.html" class="block px-3 py-2 hover:bg-primary/90 rounded">Finanzierung</a>
+                <a href="verwaltung.html" class="block px-3 py-2 bg-accent text-primary rounded font-semibold">Verwaltung</a>
+                <a href="index.html#kontakt" class="block px-3 py-2 hover:bg-primary/90 rounded">Kontakt</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+    <section class="bg-primary text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">
+                Zuverlässige Immobilienverwaltung & Entwicklung
+            </h1>
+            <p class="text-lg md:text-xl font-light text-secondary max-w-4xl mx-auto">
+                Wir betreuen Ihre Immobilien so, als wären es unsere eigenen – **zuverlässig, wirtschaftlich und transparent**.
+            </p>
+        </div>
+    </section>
+
+    <section id="hauptleistungen" class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-lg shadow-xl p-6 border-t-4 border-accent">
+                <i class="fas fa-home text-4xl text-accent mb-4"></i>
+                <h2 class="text-2xl font-bold text-primary mb-3">Haus- & Mietverwaltung</h2>
+                <p class="text-sm font-semibold text-red-500 mb-3">
+                    Spezialisiert auf: Mehrfamilienhäuser ab 10 Einheiten.
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Mietinkasso & Mahnwesen</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Nebenkosten- & Eigentümerabrechnung</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Koordination von Instandhaltung & Handwerkern</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Detailliertes Reporting & Wirtschaftlichkeitskontrolle</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl p-6 border-t-4 border-accent">
+                <i class="fas fa-key text-4xl text-accent mb-4"></i>
+                <h2 class="text-2xl font-bold text-primary mb-3">Professionelle Mietvermittlung</h2>
+                <p class="text-sm font-semibold text-red-500 mb-3">
+                    Spezialisiert auf: Objekte ab 400€ Nettokaltmiete.
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Marktgerechte Mietpreisermittlung</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Erstellung professioneller Exposés</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Bonitätsprüfung & Mieter-Vorauswahl</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Vertragsabwicklung & Übergabe</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl p-6 border-t-4 border-accent">
+                <i class="fas fa-drafting-compass text-4xl text-accent mb-4"></i>
+                <h2 class="text-2xl font-bold text-primary mb-3">Projektentwicklung & Neubau</h2>
+                <p class="text-sm font-semibold text-white mb-3">&nbsp;</p> <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Konzeptentwicklung & Wirtschaftlichkeitsanalyse</li>
+                <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Baurechtsprüfung & Genehmigungsmanagement</li>
+                <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Vermarktung und Verkauf von Neubauprojekten</li>
+                <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3"></i> Betreuung bis zur Schlüsselübergabe</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="langfristig" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-primary">
+                Langfristige Partnerschaften & Werterhalt
+            </h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Unsere Verwaltung geht über die bloße Abwicklung hinaus. Wir agieren als **aktiver Partner** zur Sicherung und Steigerung des Werts Ihrer Immobilie. Durch präzises Reporting und vorausschauende Instandhaltungsplanung sorgen wir für stabile Renditen und zufriedene Mieter.
+            </p>
+            <p class="text-lg font-semibold text-secondary text-center">
+                Profitieren Sie von unserer Erfahrung im Management großer Wohnportfolios.
+            </p>
+        </div>
+    </section>
+
+    <section id="cta" class="bg-primary py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-accent">Ihre professionelle Verwaltungsanfrage</h2>
+            <p class="text-xl mb-8 text-white max-w-3xl mx-auto">
+                Sie möchten den Aufwand auslagern und sich auf die Rendite konzentrieren? Senden Sie uns die Details Ihres Objekts zu.
+            </p>
+            <a href="index.html#kontakt" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-white transition duration-300">
+                Verwaltungsanfrage senden
+            </a>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
+                </h3>
+                <p class="text-gray-400 mt-1">Ihr Partner für Immobilienlösungen in Berlin/Brandenburg</p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>
+                &copy; 2024 Fischer-Geserich Immobilien. Alle Rechte vorbehalten.
+                | <a href="impressum.html" class="hover:underline">Impressum</a>
+                | <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
