@@ -1,0 +1,171 @@
+---
+layout: base.njk
+title: Angebote – Das Team von Fischer-Geserich Immobilien
+permalink: angebote.html
+---
+
+    <section class="bg-primary text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">
+                Aktuelle Immobilienangebote
+            </h1>
+            <p class="text-lg md:text-xl font-light text-secondary max-w-4xl mx-auto">
+                Ob Eigentumswohnung, Mehrfamilienhaus oder Grundstück – wir vermarkten Immobilien mit maximaler Reichweite und Effizienz.
+            </p>
+        </div>
+    </section>
+
+    <section id="angebote" class="container mx-auto px-4 py-16">
+        <div class="bg-white p-6 rounded-lg shadow-xl mb-10 border-t-4 border-accent">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Ihre Immobiliensuche</h2>
+    
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <select class="p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary">
+                    <option>Kauf/Miete</option>
+                    </select>
+                <button class="bg-accent text-primary font-bold rounded hover:bg-primary hover:text-white transition duration-300">
+                    <i class="fas fa-search mr-2"></i> Suchen
+                </button>
+            </div>
+        </div>
+    
+        <h2 class="text-3xl font-bold mb-8 text-primary border-b-2 border-secondary pb-2">
+            Aktuelle Objekte ({{ collections.immobilien | length }})
+        </h2>
+        
+        {% if collections.immobilien %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+            {% for post in collections.immobilien %}
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <a href="{{ post.url }}">
+                    <img src="{{ post.data.hauptbild }}" alt="Hauptbild von {{ post.data.titel }}" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-5">
+                    <span class="inline-block bg-secondary text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">{{ post.data.status }}</span>
+                    
+                    <h3 class="text-xl font-bold text-primary mb-1">{{ post.data.titel }}, {{ post.data.ort }}</h3>
+                    <p class="text-2xl font-extrabold text-accent mb-3">€ {{ post.data.preis }}</p>
+                    
+                    <div class="flex justify-between text-sm text-gray-600 mb-4 border-t pt-2">
+                        <span><i class="fas fa-ruler-combined mr-1"></i> {{ post.data.eckdaten.flaeche }} m²</span>
+                        <span><i class="fas fa-bed mr-1"></i> {{ post.data.eckdaten.zimmer }} Zi.</span>
+                        <span><i class="fas fa-city mr-1"></i> PLZ</span>
+                    </div>
+                    
+                    <a href="{{ post.url }}" class="block text-center bg-accent text-primary font-bold py-2 rounded-lg hover:bg-primary hover:text-white transition duration-300">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center text-lg text-gray-600 mt-10">Aktuell sind keine Immobilienangebote verfügbar. Bitte prüfen Sie später erneut.</p>
+        {% endif %}
+        
+    </section>
+
+    <section id="maklerei" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-primary">
+                Ihre Vorteile im Vertrieb mit Fischer-Geserich
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+                <div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Wir decken die gesamte Palette ab: vom klassischen Einfamilienhaus bis hin zu komplexen Projektentwicklungen im Millionenbereich. Unser Ziel ist die maximale Wertschöpfung für Sie, kombiniert mit einem schnellen und sicheren Verkaufsprozess.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 font-semibold text-secondary">
+                        Verlassen Sie sich auf unsere Expertise in der Region Berlin/Brandenburg.
+                    </p>
+                    <a href="#cta-wertermittlung" class="inline-block bg-accent text-primary font-bold py-3 px-8 rounded-lg shadow-md hover:bg-primary hover:text-white transition duration-300">
+                        Kostenlose Wertermittlung anfordern
+                    </a>
+                </div>
+
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        Professionelle Immobilienbewertung zur Festlegung des optimalen Marktpreises.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        High-End-Vermarktung inklusive professioneller Fotos, Drohnenaufnahmen und Präsenz auf allen relevanten Portalen.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        Effiziente Besichtigungen mit geprüften Interessenten und diskreter Abwicklung.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        Vollständige Vertragsabwicklung bis hin zur Begleitung des Notartermins.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        Umfassende Nachbetreuung und Klärung aller finalen Fragen.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-wertermittlung" class="bg-primary py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-accent">Ihre Immobilie in den besten Händen</h2>
+
+            <p class="text-xl mb-8 text-white max-w-4xl mx-auto">
+                Egal ob Sie eine kostenlose Wertermittlung wünschen oder direkt mit dem Verkauf starten möchten:
+                Nutzen Sie unser Kontaktformular für ein unverbindliches Erstgespräch mit unseren Experten.
+            </p>
+
+            <a href="index.html#kontakt" class="inline-block bg-accent text-primary font-bold py-4 px-12 text-lg rounded-lg shadow-xl hover:bg-white transition duration-300 transform hover:scale-105">
+                Jetzt unverbindlich Kontakt aufnehmen
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-city mr-2 text-accent"></i>
+                    Fischer-Geserich Immobilien
+                </h3>
+                <p class="text-gray-400 mt-1">Ihr Partner für Immobilienlösungen in Berlin/Brandenburg</p>
+            </div>
+
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>
+                &copy; 2024 Fischer-Geserich Immobilien. Alle Rechte vorbehalten.
+                | <a href="impressum.html" class="hover:underline">Impressum</a>
+                | <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
