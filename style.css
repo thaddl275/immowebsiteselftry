@@ -68,7 +68,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background-color: #d2b000;
+    background-color: #aa8c00;
 }
 
 .timeline-dot {
@@ -78,7 +78,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #d2b000;
+    background-color: #957c00;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -109,3 +109,81 @@
     border-color: #ef4444;
 }
 
+/* Hier sind alle Infos zu den Gradient Buttons */
+
+.btn-85 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #b69812 0%, #b07d17 8%, #9f761e 30%, #a27919 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #ffea8b 8%, #D1B464 25%, #bca05d 62.5%, #5d4a1f 100%);
+    color: #0B0B45;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s;
+    user-select: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+    /*** full width block ***/
+    /* width: 100%; */
+}
+
+.btn-85:hover {
+    /* 1. Stärkerer Schatten, um den Button "herauszuheben" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* 2. Subtiler 3D-Effekt: Bewegt den Button ganz leicht nach oben */
+    transform: translateY(-2px);
+}
+
+.btn-85:active {
+    box-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-85:disabled {
+    pointer-events: none;
+    opacity: .65;
+    color: #7e7e7e;
+    background: #dcdcdc;
+    box-shadow: none;
+}
+
+/* --- METALLIC GOLD HEADINGS FIX --- */
+.text-gold-gradient {
+    /* Fallback Farbe, falls Gradients nicht unterstützt werden */
+    color: rgb(218, 165, 32);
+
+    /* Der komplexe Gradient für den Gold-Effekt (Webkit-Präfixe) */
+    background: radial-gradient(ellipse farthest-corner at right bottom, #b69812 0%, #b07d17 8%, #9f761e 30%, #a27919 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #ffea8b 8%, #D1B464 25%, #bca05d 62.5%, #5d4a1f 100%);
+
+    /* Anwendung des Gradienten auf den Text und Entfernen der Füllfarbe */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Zusätzliche Optimierung für Firefox und andere Browser (optional) */
+    background: -o-linear-gradient(transparent, transparent);
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Spezial-Klasse für Text-Schatten */
+.with-shadow {
+    text-shadow: 0px 0px 20px rgba(212, 175, 55, .5);
+}
+
+
+/* Gold Rand Button beim Hovern komplett ausgefüllt:*/
+
+.border-2.border-accent:hover {
+
+    
+    /* Stellt sicher, dass die Basis-Hintergrundfarbe (weiß) überschrieben wird */
+    background: radial-gradient(ellipse farthest-corner at right bottom, #b69812 0%, #b07d17 8%, #9f761e 30%, #a27919 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #ffea8b 8%, #D1B464 25%, #bca05d 62.5%, #5d4a1f 100%);
+    color: #0B0B45; /* Navy Blue Textfarbe */
+
+    /* Anwendung des Schatten-Effekts */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}

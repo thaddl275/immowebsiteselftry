@@ -10,10 +10,10 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#0B0B45', // Navy Blue (Kontrastfarbe/Seriosität)
-                        'secondary': '#89CFF0', // Baby Blue (Akzentfarbe/Text)
-                        'accent': '#FFD700', // Gold (Buttons, Sterne, Akzente)
-                        'page-bg': '#E9EEF0', // Off-White Hintergrund
+                        'primary': '#08082F', // Navy Blue (Kontrastfarbe/Seriosität)
+                        'secondary': '#91DCFF', // Baby Blue (Akzentfarbe/Text)
+                        'accent': '#D1B464', // Gold (Buttons, Sterne, Akzente)
+                        'page-bg': '#CDD2D4', // Off-White Hintergrund
                     }
                 }
             }
@@ -42,7 +42,7 @@
 
             <div class="hidden md:flex space-x-8 items-center">
                 {% set currentUrl = page.url | url %}
-                {% set activeClass = "text-accent font-bold border-b-2 border-accent pb-1" %}
+                {% set activeClass = "text-gold-gradient with-shadow font-bold border-b-2 border-accent pb-1" %}
                 {% set defaultClass = "hover:text-accent" %}
 
                 <a href="/index.html"
@@ -75,7 +75,7 @@
                     Verwaltung
                 </a>
 
-                <a href="/index.html#kontakt" class="hover:text-primary bg-accent text-primary px-4 py-2 rounded font-semibold transition duration-300 hover:bg-white">Kontakt</a>
+                <a href="/index.html#kontakt" class="btn-85 text-base font-bold py-2 px-6">Kontakt</a>
             </div>
         </div>
 
@@ -117,9 +117,9 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
                 <h3 class="text-xl font-bold flex items-center">
-                    <i class="fas fa-city mr-2 text-accent"></i> Fischer-Geserich Immobilien
+                    <img src="/images/logoblauOS.png" alt="Fischer-Geserich Logo" class="h-12 w-auto mr-3"> Fischer-Geserich Immobilien
                 </h3>
-                <p class="text-gray-400 mt-1">Ihr Partner für Immobilienlösungen in Berlin/Brandenburg</p>
+                
             </div>
 
             <div class="flex space-x-6">
