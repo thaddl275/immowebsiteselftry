@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Fischer-Geserich Immobilien</title>
+    <title>{{ title }} | Fischer & Geserich Real Estate GmbH</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,9 +27,11 @@
 
 <nav class="bg-primary text-white shadow-lg">
     <div class="container mx-auto px-4">
+        
         <div class="flex justify-between items-center py-4">
+            
             <div class="text-2xl font-bold">
-                            <a href="/index.html" class="flex items-center">
+                <a href="/index.html" class="flex items-center text-gold-metallic hover:opacity-90 transition">
                                 <svg
                                     <svg
                                        version="1.0"
@@ -55,83 +57,85 @@
                                       </g>
                                     
                                 </svg>
-                                Fischer-Geserich Immobilien
+                                <span class="hidden lg:inline">Fischer & Geserich Real Estate</span> 
+                                <span class="lg:hidden">F&G Real Estate</span>
                             </a>
             </div>
 
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-
-            <div class="hidden md:flex space-x-8 items-center">
-                {% set currentUrl = page.url | url %}
-                {% set activeClass = "text-gold-gradient with-shadow font-bold border-b-2 border-accent pb-1" %}
-                {% set defaultClass = "hover:text-accent" %}
-
-                <a href="/index.html"
-                   class="{% if currentUrl == '/' or currentUrl == '/index.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
-                    Start
-                </a>
-
-                <a href="/angebote.html"
-                   class="{% if currentUrl == '/angebote.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
-                    Angebote
-                </a>
-
-                <a href="/ueber-uns.html"
-                   class="{% if currentUrl == '/ueber-uns.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
-                    Über uns
-                </a>
-
-                <a href="/ankaufsberatung.html"
-                   class="{% if currentUrl == '/ankaufsberatung.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
-                    Ankauf
-                </a>
-
-                <a href="/finanzierungsberatung.html"
-                   class="{% if currentUrl == '/finanzierungsberatung.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
-                    Finanzierung
-                </a>
-
-                <a href="/verwaltung.html"
-                   class="{% if currentUrl == '/verwaltung.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
-                    Verwaltung
-                </a>
-
-                <a href="/index.html#kontakt" class="btn-85 text-base font-bold py-2 px-6">Kontakt</a>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-            <div class="flex flex-col space-y-2">
-                {% set mobileActiveClass = "block px-3 py-2 bg-accent text-primary rounded font-semibold" %}
-                {% set mobileDefaultClass = "block px-3 py-2 hover:bg-primary/90 rounded" %}
-
-                <a href="/index.html"
-                   class="{% if currentUrl == '/' or currentUrl == '/index.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Start</a>
-
-                <a href="/angebote.html"
-                   class="{% if currentUrl == '/angebote.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Angebote</a>
-
-                <a href="/ueber-uns.html"
-                   class="{% if currentUrl == '/ueber-uns.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Über uns</a>
-
-                <a href="/ankaufsberatung.html"
-                   class="{% if currentUrl == '/ankaufsberatung.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Ankauf</a>
-
-                <a href="/finanzierungsberatung.html"
-                   class="{% if currentUrl == '/finanzierungsberatung.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Finanzierung</a>
-
-                <a href="/verwaltung.html"
-                   class="{% if currentUrl == '/verwaltung.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Verwaltung</a>
-
-                <a href="/index.html#kontakt" class="{{ mobileDefaultClass }}">Kontakt</a>
-            </div>
-        </div>
-    </div>
-</nav>
+            <div class="lg:hidden">
+                            <button id="mobile-menu-button" class="text-white focus:outline-none">
+                                <i class="fas fa-bars text-2xl"></i>
+                            </button>
+                        </div>
+            
+                        <div class="hidden lg:flex space-x-8 items-center">
+                                        {% set currentUrl = page.url | url %}
+                                        
+                                        {% set activeClass = "text-gold-gradient with-shadow font-bold border-b-2 border-accent pb-1 whitespace-nowrap" %}
+                                        {% set defaultClass = "hover:text-accent whitespace-nowrap" %}
+                        
+                                        <a href="/index.html"
+                                           class="{% if currentUrl == '/' or currentUrl == '/index.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
+                                            Start
+                                        </a>
+                        
+                                        <a href="/angebote.html"
+                                           class="{% if currentUrl == '/angebote.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
+                                            Angebote
+                                        </a>
+                        
+                                        <a href="/ueber-uns.html"
+                                           class="{% if currentUrl == '/ueber-uns.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
+                                            Über uns
+                                        </a>
+                        
+                                        <a href="/ankaufsberatung.html"
+                                           class="{% if currentUrl == '/ankaufsberatung.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
+                                            Ankauf
+                                        </a>
+                        
+                                        <a href="/finanzierungsberatung.html"
+                                           class="{% if currentUrl == '/finanzierungsberatung.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
+                                            Finanzierung
+                                        </a>
+                        
+                                        <a href="/verwaltung.html"
+                                           class="{% if currentUrl == '/verwaltung.html' %}{{ activeClass }}{% else %}{{ defaultClass }}{% endif %}">
+                                            Verwaltung
+                                        </a>
+                        
+                                        <a href="/index.html#kontakt" class="btn-85 text-base font-bold py-2 px-6 whitespace-nowrap">Kontakt</a>
+                                    </div>
+                    </div>
+            
+                    <div id="mobile-menu" class="hidden lg:hidden pb-4 shadow-xl bg-primary">
+                        <div class="flex flex-col space-y-2">
+                            {% set mobileActiveClass = "block px-3 py-2 bg-accent text-primary rounded font-semibold" %}
+                            {% set mobileDefaultClass = "block px-3 py-2 hover:bg-primary/90 rounded" %}
+            
+                            <a href="/index.html"
+                               class="{% if currentUrl == '/' or currentUrl == '/index.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Start</a>
+            
+                            <a href="/angebote.html"
+                               class="{% if currentUrl == '/angebote.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Angebote</a>
+            
+                            <a href="/ueber-uns.html"
+                               class="{% if currentUrl == '/ueber-uns.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Über uns</a>
+            
+                            <a href="/ankaufsberatung.html"
+                               class="{% if currentUrl == '/ankaufsberatung.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Ankauf</a>
+            
+                            <a href="/finanzierungsberatung.html"
+                               class="{% if currentUrl == '/finanzierungsberatung.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Finanzierung</a>
+            
+                            <a href="/verwaltung.html"
+                               class="{% if currentUrl == '/verwaltung.html' %}{{ mobileActiveClass }}{% else %}{{ mobileDefaultClass }}{% endif %}">Verwaltung</a>
+            
+                            <a href="/index.html#kontakt" class="{{ mobileDefaultClass }}">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
 
 <main>{{ content | safe }}</main>
@@ -142,9 +146,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="text-2xl font-bold">
                                         <a href="/index.html" class="flex items-center">
-                                            <svg
-                                                <svg
-                                                   version="1.0"
+                                            <svg   version="1.0"
                                                    width="1023.999pt"
                                                    height="1024.0005pt"
                                                    viewBox="0 -70 1023.999 1024.0005"
@@ -167,14 +169,13 @@
                                                   </g>
                                                 
                                             </svg>
-                                            Fischer-Geserich Immobilien
+                                            <span class="hidden md:inline">Fischer & Geserich Real Estate</span>
+                                                                      
+                                            <span class="md:hidden">F&G Real Estate</span>
                                         </a>
                         </div>
 
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
-                    <i class="fab fa-facebook-f text-xl"></i>
-                </a>
                 <a href="#" class="text-gray-400 hover:text-accent transition duration-300">
                     <i class="fab fa-linkedin-in text-xl"></i>
                 </a>
@@ -246,5 +247,6 @@
         });
     });
 </script>
+<script src="/script.js"></script>
 </body>
 </html>

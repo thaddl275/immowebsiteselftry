@@ -17,27 +17,35 @@ collections:
     
     fields:
       # Für Eleventy: Wird für die URL-Erstellung verwendet
-      - {label: "Titel (für URL)", name: "title", widget: "string", required: true, hint: "Kurzname für die URL (z.B. 'test-wohnung-in-berlin')"}
-      # Für die Anzeige auf der Website
-      - {label: "Anzeigetitel", name: "titel", widget: "string", required: true}
-      - {label: "Ort", name: "ort", widget: "string", required: true}
-      - {label: "Kaufpreis (€)", name: "preis", widget: "number", value_type: "int", required: true}
-      - {label: "Status", name: "status", widget: "select", options: ["NEU", "VERKAUFT", "RESERVIERT"], default: "NEU"}
-      - {label: "Hauptbild", name: "hauptbild", widget: "image", required: true, hint: "Bild, das oben auf der Detailseite angezeigt wird"}
+      - { label: "Titel (für URL)", name: "title", widget: "string", required: true, hint: "Kurzname für die URL (z.B. 'test-wohnung-in-berlin')" }
       
-      # Das ist der Hauptinhalt (die lange Beschreibung der Immobilie)
-      - {label: "Objektbeschreibung", name: "body", widget: "markdown"}
+      # Sichtbare Daten
+      - { label: "Anzeigetitel", name: "titel", widget: "string", required: true }
       
-      # Verschachtelte Eckdaten-Felder
+      # NEU: Unterscheidung Kauf / Miete (Wichtig für Filter!)
+      - { label: "Vermarktungsart", name: "vermarktungsart", widget: "select", options: [ "Kauf", "Miete" ], default: "Kauf", required: true }
+      
+      # NEU: Objektart (Wichtig für Filter!)
+      - { label: "Objektart", name: "objektart", widget: "select", options: [ "Wohnung", "Haus", "Grundstück", "Gewerbe" ], default: "Wohnung", required: true }
+
+      - { label: "Ort", name: "ort", widget: "string", required: true }
+      - { label: "Preis (€) / Kaltmiete", name: "preis", widget: "number", value_type: "int", required: true }
+      - { label: "Maklercourtage", name: "provision", widget: "string", required: false, hint: "z.B. '3,57 % inkl. MwSt.' oder 'Provisionsfrei'" }
+      - { label: "Status", name: "status", widget: "select", options: [ "NEU", "VERKAUFT", "RESERVIERT", "VERMIETET" ], default: "NEU" }
+
+      - { label: "Hauptbild", name: "hauptbild", widget: "image", required: true }
+      - { label: "Objektbeschreibung", name: "body", widget: "markdown" }
+      
+      # Eckdaten
       - label: "Eckdaten"
         name: "eckdaten"
         widget: "object"
         fields:
-          - {label: "Wohnfläche (m²)", name: "flaeche", widget: "number", value_type: "int"}
-          - {label: "Anzahl Zimmer", name: "zimmer", widget: "number", value_type: "int"}
-          - {label: "Baujahr", name: "baujahr", widget: "number", value_type: "int", min: 1800, max: 2050}
+          - { label: "Wohnfläche (m²)", name: "flaeche", widget: "number", value_type: "int" }
+          - { label: "Anzahl Zimmer", name: "zimmer", widget: "number", value_type: "int" }
+          - { label: "Baujahr", name: "baujahr", widget: "number", value_type: "int", min: 1800, max: 2050 }
       
-      # Versteckte Felder für Eleventy-Konfiguration (müssen in jeder Datei sein)
-      - {label: "Layout", name: "layout", widget: "hidden", default: "immobilien-detail.liquid"}
-      - {label: "Permalink", name: "permalink", widget: "hidden", default: "angebote/{{title | slugify}}/index.html"}
-      - {label: "Tags", name: "tags", widget: "hidden", default: "immobilien"} # Wichtig, damit Eleventy die Einträge auf der Angebotsseite findet
+      # Versteckte Felder
+      - { label: "Layout", name: "layout", widget: "hidden", default: "immobilien-detail.liquid" }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "angebote/{{title | slugify}}/index.html" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "immobilien" }

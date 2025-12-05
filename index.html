@@ -63,12 +63,15 @@ permalink: index.html
 
                 <h2 class="text-3xl font-bold mb-4 text-gold-gradient">Unsere Philosophie</h2>
                 <p class="text-lg mb-4 text-page-bg">
-                    Fischer-Geserich Immobilien ist Ihr spezialisierter Partner für nachhaltige Immobilienlösungen im dynamischen Raum Berlin und Brandenburg. Unsere Philosophie basiert auf der festen Überzeugung, dass Erfolg im Immobiliengeschäft Vertrauen, tiefes Fachwissen und einen ganzheitlichen Service erfordert. <br>
+                    Was unterscheidet uns nun von anderen Maklergesellschaften? Warum glauben wir, besser und <b>erfolgreicher</b> zu sein, obwohl wir doch ganz neu eintreten in den Kreis der Vermittlungsunternehmen von Immobilieneigentum?  <br><br>
 
-                    Wir verstehen uns nicht nur als Makler oder Vermittler, sondern als strategischer Begleiter unserer Kunden. Diesen Anspruch untermauern wir durch höchste Kompetenz in der Bewertung und Abwicklung sowie durch absolute Transparenz in jedem Schritt des Prozesses. Von der ersten Objektbewertung über die gezielte Vermarktung bis hin zur strukturierten Finanzierung erhalten Sie bei uns alle Leistungen aus einer Hand.<br>
+                    Die Antwort ist: <b>"Gerade deswegen!"</b>  -  Ja, unser Unternehmung ist eine Neugründung, ein Start-up. Aber wir vier bei Fischer & Geserich Real Estate verantwortlichen Partner sind alle vier doch "alte Haden": alle mit mehr-, teils mit langjährigen Erfahrungen in der Immobilienvermittlung, der Immobilienverwaltung, der Finanzierung, Versicherung und  im Vertrieb. Und wir sind hoch motiviert, wie es sich für eine Start-up-Mannschaft [ein Start-up Team?] gehört.<br><br>
+
+                    Was uns <b>Partner</b> neben guter Freundschaft untereinander verbindet:  Wir sind alle Vier <b>leidenschaftliche Verkäufer</b>. Bei uns gibt's kein "Mach ich morgen" oder "das Wochenende gehört meiner Familie". Unsere Devise ist: <br>
+
                 </p>
                 <p class="text-lg italic text-gold-gradient">
-                    Unser Ziel ist Ihr Erfolg – langfristig und partnerschaftlich.
+                    <b>"Do it now!" -  mit Charme und Freude!</b>
                 </p>
             </div>
 
@@ -204,14 +207,36 @@ permalink: index.html
                         <input type="text" id="name" name="Name" placeholder="Ihr Name" required
                                class="w-full p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary">
                     </div>
+
                     <div>
                         <input type="email" id="email" name="E-Mail" placeholder="Ihre E-Mail-Adresse" required
                                class="w-full p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary">
                     </div>
+
                     <div>
-                        <textarea id="anliegen" name="Anliegen" rows="3" placeholder="Ihr Anliegen (z.B. Verkauf Berlin, Finanzierung)" required class="w-full p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary"></textarea>
+                        <input type="tel" id="telefonnummer" name="Telefonnummer" placeholder="Ihre Telefonnummer" required
+                               class="w-full p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary">
                     </div>
-                    <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-accent hover:text-primary transition duration-300">
+
+                    <div>
+                        <select id="anliegen-auswahl" name="Anliegen_Kategorie" required
+                                class="w-full p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary text-gray-700">
+                            <option value="" disabled selected>Auswahl Anliegen *</option>
+                            <option value="Finanzierung">Finanzierung</option>
+                            <option value="Verkauf">Verkauf</option>
+                            <option value="Ankaufsberatung">Ankaufsberatung</option>
+                            <option value="Vermietung">Vermietung</option>
+                            <option value="Verwaltung">Verwaltung</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                    </div>
+
+                    <div>
+            <textarea id="anliegen_text" name="Detailliertes_Anliegen" rows="3" placeholder="Schildern Sie uns Ihr Anliegen" required
+                      class="w-full p-3 border border-gray-300 rounded focus:border-primary focus:ring-primary"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-2 rounded-lg hover:bg-accent hover:text-primary transition duration-300">
                         Rückruf anfordern
                     </button>
                 </form>
