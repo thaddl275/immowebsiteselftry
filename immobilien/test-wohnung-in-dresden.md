@@ -1,8 +1,11 @@
 ---
 title: test-wohnung-in-dresden
 titel: Licht-Paradies in der Neustadt!
+vermarktungsart: Kauf
+objektart: Haus
 ort: Dresden
 preis: 365000
+provision: 3,57 % inkl. MwSt.
 status: RESERVIERT
 hauptbild: /images/uploads/_1195477.jpg
 eckdaten:
