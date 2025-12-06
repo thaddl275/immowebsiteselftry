@@ -114,3 +114,116 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
+
+
+
+/* Switch Button Eigenschaften*/
+
+
+/* --- CUSTOM CHECKBOX SWITCH (ANGEPASST AN CI) --- */
+
+.switch-button-wrapper {
+    /* Zentriert den Switch unter der Hero-Sektion */
+    margin: -32px auto 0 auto;
+    position: relative;
+    z-index: 10;
+    width: 320px; /* Breite des gesamten Schalters */
+    max-width: 90%;
+
+    /* Fügt den weißen Hintergrund und Schatten hinzu, um den Switch abzuheben */
+    background: #FFF;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.switch-button {
+    background: #CDD2D4; /* Hintergrundfarbe des Trackers (Ihr page-bg) */
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #08082F; /* Navy Blue Textfarbe (primary) */
+    position: relative;
+    /* Passt das Padding an, um Platz für beide Label-Hälften zu schaffen */
+    padding-right: 50%;
+}
+
+/* Der Text für den rechten Zustand (Kapitalanleger) */
+.switch-button:before {
+    content: "Für Eigennutzer";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%; /* Die Hälfte der Breite */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+    color: #08082F; /* Textfarbe (Navy) */
+}
+
+.switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+
+/* Wenn die Checkbox NICHT gechecked ist (Standard: Kapitalanleger) */
+.switch-button-checkbox:not(:checked) + .switch-button-label {
+    color: #FFF; /* Textfarbe des aktiven Feldes auf Weiß (für den Gold-Slider) */
+}
+/* Wenn die Checkbox GECHECKED ist (Wechsel zu: Eigennutzer) */
+.switch-button-checkbox:checked + .switch-button-label .switch-button-label-span {
+    color: #FFF; /* Textfarbe des aktiven Feldes auf Weiß */
+}
+
+
+/* Der Slider (Der Gold-Gradient, der sich bewegt) */
+.switch-button-label {
+    position: relative;
+    padding: 10px 0; /* Padding für die Höhe anpassen */
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Der Gold-Slider selbst */
+.switch-button-label:before {
+    content: "";
+    /* Der Gold-Gradient wird als Hintergrund des Sliders verwendet */
+    background: linear-gradient(to right, #D1B464, #A27919); /* Vereinfachter Gold-Gradient */
+    height: 100%;
+    width: 50%; /* Die Hälfte der Breite */
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transform: translateX(0);
+    transition: transform 300ms;
+    z-index: 1; /* Muss unter den Texten liegen */
+}
+
+/* Wenn die Checkbox GECHECKED ist, bewegt sich der Slider um 100% nach rechts */
+.switch-button-checkbox:checked + .switch-button-label:before {
+    transform: translateX(100%);
+}
+
+
+/* Text für den linken Zustand (Kapitalanleger) */
+.switch-button-label-span {
+    position: relative;
+    z-index: 3;
+    width: 50%;
+    display: inline-block;
+    color: #08082F; /* Navy Blue */
+}
